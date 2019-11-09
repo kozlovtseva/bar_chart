@@ -6,7 +6,30 @@ import {
 
 
 export interface DataArray {
-    [index: number]: number;
+    "day":{
+        "up to 20": number,
+        "20 - 30": number,
+        "30 - 40": number,
+        "40 - 50": number,
+        "50 - 60": number,
+        "over 60": number
+    },
+    "month":{
+        "up to 20": number,
+        "20 - 30": number,
+        "30 - 40": number,
+        "40 - 50": number,
+        "50 - 60": number,
+        "over 60": number
+    },
+    "year":{
+        "up to 20": number,
+        "20 - 30": number,
+        "30 - 40": number,
+        "40 - 50": number,
+        "50 - 60": number,
+        "over 60": number
+    }
 }
 
 export interface DataState {
