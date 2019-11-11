@@ -1,10 +1,6 @@
 import { applyMiddleware, combineReducers, createStore, Store } from 'redux';
 import thunk from 'redux-thunk';
-import {
-    DataReducer,
-    DataState
-} from './reducer';
-
+import { DataReducer, DataState } from './reducer';
 
 export interface AppState {
     dataState: DataState;

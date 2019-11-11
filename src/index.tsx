@@ -10,26 +10,25 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-
 interface Props {
-  store: Store<AppState>;
+    store: Store<AppState>;
 }
 
 const Root: React.SFC<Props> = props => {
-  return (
-    <Provider store={props.store}>
-      <App />
-    </Provider>
-  );
+    return (
+        <Provider store={props.store}>
+            <App />
+        </Provider>
+    );
 };
 
 const store = configureStore();
 store.dispatch(GetDataAction());
 
-ReactDOM.render(<Root store={store} />, document.getElementById(
-  'root'
-) as HTMLElement);
-
+ReactDOM.render(
+    <Root store={store} />,
+    document.getElementById('root') as HTMLElement,
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

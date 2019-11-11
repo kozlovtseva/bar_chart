@@ -1,17 +1,16 @@
-// import { ActionCreator, Dispatch } from "redux";
-// import { ThunkAction } from "redux-thunk";
-// import axios from "axios";
-import { DataArray } from "./reducer";
-import DATA from "./data.json";
-
+// import { ActionCreator, Dispatch } from 'redux';
+// import { ThunkAction } from 'redux-thunk';
+// import axios from 'axios';
+import { DataArray } from './reducer';
+import DATA from './data.json';
 
 export enum DataActionTypes {
-    GET_DATA = "GET_DATA"
+    GET_DATA = 'GET_DATA',
 }
 
 export interface GetDataAction {
-  type: DataActionTypes.GET_DATA;
-  data: DataArray[];
+    type: DataActionTypes.GET_DATA;
+    data: DataArray[];
 }
 
 export type DataActions = GetDataAction;
@@ -21,7 +20,7 @@ export type DataActions = GetDataAction;
 // > = () => {
 //   return async (dispatch: Dispatch) => {
 //     try {
-//       const response = await axios.get("#");
+//       const response = await axios.get('#');
 //       dispatch({
 //         data: response.data.results,
 //         type: DataActionTypes.GET_DATA
@@ -33,7 +32,7 @@ export type DataActions = GetDataAction;
 // };
 export function GetDataAction() {
     return {
-      type: DataActionTypes.GET_DATA,
-      data: DATA
+        type: DataActionTypes.GET_DATA,
+        data: DATA,
     };
 }

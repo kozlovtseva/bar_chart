@@ -1,13 +1,11 @@
-
 import * as React from 'react';
 import { connect } from 'react-redux';
 
 import { AppState } from '../store/store';
 import { DataArray } from '../store/reducer';
 
-
 interface Props {
-  data: DataArray[];
+    data: DataArray[];
 }
 
 class BarChart extends React.Component<Props> {
@@ -16,24 +14,22 @@ class BarChart extends React.Component<Props> {
         console.log(data);
         return (
             <div>
-                {/* {data &&
-                characters.map(character => {
-                    return (
-                    <span key={character.name} className="name">
-                        {character.name}
-                    </span>
-                    );
-                })} */}
+                {/* {data.map((item, index) => {
+                      return (
+                        <Item key={index}
+                            {...item}/>
+                      );
+                    }
+                 */}
             </div>
         );
     }
 }
 
-
 const mapStateToProps = (store: AppState) => {
-  return {
-    data: store.dataState.data,
-  };
+    return {
+        data: store.dataState.data,
+    };
 };
 
 export default connect(mapStateToProps)(BarChart);
