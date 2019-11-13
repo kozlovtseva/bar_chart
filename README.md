@@ -1,3 +1,10 @@
+### Запустить приложение
+## `npm i`
+## `yarn start`
+
+## мини-шаблон - template.png
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
