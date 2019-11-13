@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Bar: React.SFC<Props> = props => {
-    return <div>{props.age}</div>;
+    return <div>{props.amount}</div>;
 };
 
 export default Bar;
