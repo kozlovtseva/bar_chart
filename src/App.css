@@ -18,6 +18,9 @@
     outline: none;
     width: 290px;
 }
+.Button_state_active{
+    opacity: 100%;
+}
 .Button:hover{
     cursor: pointer;
 }

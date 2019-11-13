@@ -42,21 +42,33 @@ class BarChart extends React.Component<Props, State> {
                     <button
                         type="button"
                         onClick={() => this.changePeriod('day')}
-                        className={button()}
+                        className={
+                            this.state.period === 'day'
+                                ? button({ state: 'active' })
+                                : button()
+                        }
                     >
                         За день
                     </button>
                     <button
                         type="button"
                         onClick={() => this.changePeriod('month')}
-                        className={button()}
+                        className={
+                            this.state.period === 'month'
+                                ? button({ state: 'active' })
+                                : button()
+                        }
                     >
                         За месяц
                     </button>
                     <button
                         type="button"
                         onClick={() => this.changePeriod('year')}
-                        className={button()}
+                        className={
+                            this.state.period === 'year'
+                                ? button({ state: 'active' })
+                                : button()
+                        }
                     >
                         За год
                     </button>
