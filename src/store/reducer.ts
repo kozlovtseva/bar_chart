@@ -7,17 +7,16 @@ interface Item {
 }
 
 export interface DataArray {
-    day: Item[];
-    month: Item[];
-    year: Item[];
+    [index: string]: Item[];
+    // day: Item[];
 }
 
 export interface DataState {
-    readonly data: DataArray[];
+    data: DataArray;
 }
 
 const initialState: DataState = {
-    data: [],
+    data: {},
 };
 
 export const DataReducer: Reducer<DataState, DataActions> = (

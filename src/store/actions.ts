@@ -10,7 +10,7 @@ export enum DataActionTypes {
 
 export interface GetDataAction {
     type: DataActionTypes.GET_DATA;
-    data: DataArray[];
+    data: DataArray;
 }
 
 export type DataActions = GetDataAction;

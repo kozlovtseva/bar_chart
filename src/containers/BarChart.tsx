@@ -4,25 +4,18 @@ import { connect } from 'react-redux';
 import { AppState } from '../store/store';
 import { DataArray } from '../store/reducer';
 
+import Bar from '../components/Bar';
+
 interface Props {
-    data: DataArray[];
+    data: DataArray;
 }
 
 class BarChart extends React.Component<Props> {
     render() {
-        const { data } = this.props;
-        console.log(data);
-        return (
-            <div>
-                {/* {data.map((item, index) => {
-                      return (
-                        <Item key={index}
-                            {...item}/>
-                      );
-                    }
-                 */}
-            </div>
-        );
+        let bars = this.props.data.day.map((bar, index) => {
+            return <Bar key={index} {...bar} />;
+        });
+        return <div>{bars}</div>;
     }
 }
 
