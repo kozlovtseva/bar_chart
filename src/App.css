@@ -1,0 +1,42 @@
+.Container{
+    padding: 30px 200px;
+}
+.Title{
+    color: #505050;
+    font-size: 58px;
+    margin-bottom: 40px;
+}
+.Button{
+    background-color: #E0FBC4;
+    border-radius: 10px;
+    color: #505050;
+    font-size: 24px;
+    height: 59px;
+    letter-spacing: 0.05em;
+    margin-right: 50px;
+    opacity: 60%;
+    outline: none;
+    width: 290px;
+}
+.Button:hover{
+    cursor: pointer;
+}
+.Chart{
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    height: 490px;
+    width: 1309px;
+}
+.Bar-Column{
+    background: #A9E48D;
+    width: 145px;
+    transition: height 1s;
+}
+.Bar-Text{
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+    text-align: center;
+}

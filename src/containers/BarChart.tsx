@@ -1,16 +1,18 @@
 import * as React from 'react';
+import { cn } from '@bem-react/classname';
 import { connect } from 'react-redux';
 
 import { AppState } from '../store/store';
 import { DataArray } from '../store/reducer';
 
-import Bar from '../components/Bar';
-// import { string } from 'prop-types';
+import BarItem from '../components/BarItem';
+
+const button = cn('Button');
+const chart = cn('Chart');
 
 interface Props {
     data: DataArray;
 }
-
 type State = {
     period: string;
 };
@@ -32,7 +34,7 @@ class BarChart extends React.Component<Props, State> {
             data = this.props.data.year;
         }
         let bars = data.map((bar, index) => {
-            return <Bar key={index} {...bar} />;
+            return <BarItem key={index} {...bar} />;
         });
         return (
             <div>
@@ -40,23 +42,26 @@ class BarChart extends React.Component<Props, State> {
                     <button
                         type="button"
                         onClick={() => this.changePeriod('day')}
+                        className={button()}
                     >
-                        Change to day
+                        За день
                     </button>
                     <button
                         type="button"
                         onClick={() => this.changePeriod('month')}
+                        className={button()}
                     >
-                        Change to month
+                        За месяц
                     </button>
                     <button
                         type="button"
                         onClick={() => this.changePeriod('year')}
+                        className={button()}
                     >
-                        Change to year
+                        За год
                     </button>
                 </div>
-                {bars}
+                <div className={chart()}>{bars}</div>
             </div>
         );
     }
