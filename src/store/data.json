@@ -1,7 +1,7 @@
 {
     "day":[
         {
-            "age": "up to 20",
+            "age": "до 20",
             "amount": 2
         },
         {
@@ -21,13 +21,13 @@
             "amount": 2
         },
         {
-            "age": "over 60",
+            "age": "старше 60",
             "amount": 1
         }
     ],
     "month":[
         {
-            "age": "up to 20",
+            "age": "до 20",
             "amount": 12
         },
         {
@@ -47,13 +47,13 @@
             "amount": 10
         },
         {
-            "age": "over 60",
+            "age": "старше 60",
             "amount": 3
         }
     ],
     "year":[
         {
-            "age": "up to 20",
+            "age": "до 20",
             "amount": 60
         },
         {
@@ -73,7 +73,7 @@
             "amount": 50
         },
         {
-            "age": "over 60",
+            "age": "старше 60",
             "amount": 35
         }
     ]
