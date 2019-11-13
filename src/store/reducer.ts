@@ -8,7 +8,6 @@ interface Item {
 
 export interface DataArray {
     [index: string]: Item[];
-    // day: Item[];
 }
 
 export interface DataState {

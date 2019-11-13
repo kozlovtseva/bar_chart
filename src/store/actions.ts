@@ -1,6 +1,3 @@
-// import { ActionCreator, Dispatch } from 'redux';
-// import { ThunkAction } from 'redux-thunk';
-// import axios from 'axios';
 import { DataArray } from './reducer';
 import DATA from './data.json';
 
@@ -15,21 +12,6 @@ export interface GetDataAction {
 
 export type DataActions = GetDataAction;
 
-// export const GetDataAction: ActionCreator<
-//   ThunkAction<Promise<any>, DataState, null, GetDataAction>
-// > = () => {
-//   return async (dispatch: Dispatch) => {
-//     try {
-//       const response = await axios.get('#');
-//       dispatch({
-//         data: response.data.results,
-//         type: DataActionTypes.GET_DATA
-//       });
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   };
-// };
 export function GetDataAction() {
     return {
         type: DataActionTypes.GET_DATA,
